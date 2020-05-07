@@ -1,0 +1,20 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+<input type="text" id="userInput" />
+
+<pre>$(document).ready value: <span id="userInputDocumentReady"></span></pre>
+<br />
+<pre>$(window).on('pageshow') value: <span id="userInputWindowPageshow"></span></pre>
+<br />
+<a href="forwards.html">Forwards</a>
+
+<script>
+$(window).on("pageshow", function() {
+   $("#userInputWindowPageshow").text($("#userInput").val()); 
+}); 
+$(document).ready(function() {
+   $("#userInputDocumentReady").text($("#userInput").val()); 
+});
+</script>  
+
+
